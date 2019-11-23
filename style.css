@@ -1,6 +1,13 @@
 .content {
 	width: 100%!important; 
 }
+a.list-item {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05)!important;
+	padding: 16px 16px 16px 16px!important;
+}
+a.list-item:focus, a.list-item:hover {
+    background-color: #0000000d!important;
+}
 a.list-item.selected {
     background-color: #1289fe!important;
 }
@@ -33,18 +40,20 @@ a.list-item.selected .menu-icon {
 
 
 
-.main-nav-header {
-	background: #f0f0f0!important;
-}
 .header {
 	background: #f0f0f0!important;
 	box-shadow: none!important;
 	border-bottom: 1px solid #dedede!important;
 }
+.mat-dialog-container .header {
+	background: transparent!important;
+    border-bottom: 0px!important;
+}
 .main-nav-header {
 	position: relative!important;
 	box-shadow: none!important;
-	border-bottom: 1px solid #dedede!important;
+	background: #f0f0f0!important; 
+	border-bottom: 1px solid #ccc6c6!important;
 }
 .new-chat-header {
 	align-items: center!important;
@@ -166,6 +175,14 @@ mws-message-compose {
 }
 mws-message-part-content {
 	border-radius: 17px!important;
+}
+mw-main-nav {
+	border-right: 1px solid #ccc6c6!important;
+	background-image:url('chrome-extension://ghdojdofljpmhfpgncodbnpcenfocnok/images/bg.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 .text-msg-container {
 	position: relative!important;
