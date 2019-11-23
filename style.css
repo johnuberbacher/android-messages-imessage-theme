@@ -8,6 +8,9 @@ a.list-item .name {
 	font: 400 13px/20px "Google Sans",Roboto,arial,sans-serif,"NotoColorEmoji","apple color emoji","windows emoji","windows symbol"!important;
 	font-weight: bold!important;
 }
+a.list-item .unread .name {
+	color: #1289fe!important;
+}
 a.list-item .snippet-text {
 	font: 400 13px/20px Roboto,"Helvetica Neue",sans-serif,"NotoColorEmoji","apple color emoji","windows emoji","windows symbol";
 }
@@ -164,6 +167,30 @@ mws-message-compose {
 mws-message-part-content {
 	border-radius: 17px!important;
 }
+.text-msg-container {
+	position: relative!important;
+}
+.text-msg-container:not(.outgoing):after {
+	border-bottom-right-radius: 1em 0.5em;
+	border-right: 0.5em solid #e5e5ea;
+	bottom: 0;
+	content: '';
+	height: 1em;
+	left: -0.5em;
+	opacity: 1;
+	position: absolute;
+	width: 0.5em;
+}
+.text-msg-container.outgoing:after {
+    border-bottom-left-radius: 1em 0.5em;
+    border-left: 0.5em solid #1289fe;
+    bottom: 0;
+    content: '';
+    height: 1em;
+    position: absolute;
+    right: 0;
+    width: 0.5em;
+}
 mws-message-part-router {
 	margin: 10px 0 0 8px!important;
 }
@@ -174,16 +201,6 @@ mws-message-part-router {
 .outgoing .text-msg-container.outgoing {
 	position: relative!important;
 	padding-right: 0.45rem!important;
-}
-.outgoing .text-msg-container.outgoing:after {
-    border-bottom-left-radius: 1em 0.5em;
-    border-left: 0.5em solid #1289fe;
-    bottom: 0;
-    content: '';
-    height: 1em;
-    position: absolute;
-    right: 0;
-    width: 0.5em;
 }
 .xms-outgoing.enable-text-color {
 	color: #ffffff!important; 
